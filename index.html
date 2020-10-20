@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Light Up</title>
+    <!-- Load Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Load Styles -->
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- HTML Follows BEM naming conventions 
+  IDs are only used for sections to connect menu achors to sections -->
+    <header class="page__header">
+      <nav class="navbar__menu">
+        <!--Navigation starts as empty UL that will be populated with JS -->
+        <div id="navbar__list"></div>
+      </nav>
+    </header>
+    <main>
+      <!---
+     Each Section has an ID (used for the anchor) and 
+    a data attribute that will populate the li node.
+    Adding more sections will automatically populate nav.
+    The first section is set to active class by default -->
+      <section id="section-1" data-nav="Home" class="active-section">
+        <div class="landing__container">
+          <h2>Home</h2>
+          <p>We teach Education in fun and makes Kids to understand better.</p>
+          <img src="images/graduate.png" width="100px" height="100px" />
+        </div>
+      </section>
+      <section id="section-2" data-nav="About Us">
+        <div class="landing__container">
+          <h2>About Us</h2>
+          <p>
+            Our journey began via social media (YouTube and Facebook) by
+            delivering short video blogs explaining science and engineering
+            concepts of varying difficulty levels using their practical real
+            world applications in the name of a channel, ‘Light Up'. People who
+            started following our videos began to understand these concepts
+            better and started to relate them with real-world applications
+            around them. Over the past two years, we have enabled clear
+            understanding on selected science concepts for over1+ million people
+            through social media. At this juncture, we realized the need to take
+            this understanding further for the development of the masses in
+            society. Our digital selves went through a ‘Big Bang’ to come to the
+            real world and we evolved with the concept of a science fair from
+            LMES called ‘Big Bang’. Other initiatives like e-content
+            development, educational TV programs have also become a part of
+            Light Up. In short, our motto is to promote application based
+            learning which facilitates the learner to understand instead of
+            promoting rote learning. LightUp strives hard to create awareness
+            about the ease of science, by bringing an attitudinal change towards
+            science. Be a part of Light Up for a better education system.
+          </p>
+        </div>
+      </section>
+      <section id="section-3" data-nav="Our services">
+        <div class="landing__container">
+          <h2>Our Services</h2>
+          <ul>
+            <li class="service">
+              <img
+                src="images/math.png"
+                alt="math"
+                width="50px"
+                height="50px"
+              />Math Classes
+            </li>
+            <li class="service">
+              <img
+                src="images/laptop.png"
+                alt="math"
+                width="50px"
+                height="50px"
+              />Online Classes
+            </li>
+            <li class="service">
+              <img
+                src="images/blackboard.png"
+                alt="math"
+                width="50px"
+                height="50px"
+              />Kids Education
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="section-4" data-nav="Contact us">
+        <div class="landing__container">
+          <h2>Contact Us</h2>
+          <div class="form">
+            <form>
+              <input type="text" placeholder="FirstName" class="input" /><br />
+              <input type="text" placeholder="LastName" class="input" /><br />
+              <input type="email" placeholder="Email" class="input" /><br />
+              <input
+                type="phonenumber"
+                placeholder="PhoneNumber"
+                class="input"
+              /><br />
+              <textarea row="4" cols="30" class="input">
+Write your message</textarea
+              >
+              <button type="submit" class="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <button onClick="topFunction()" id="scrollTop" class="scroll">
+      &#8593;
+    </button>
+    <footer class="page__footer">
+      <p>&copy Light Up</p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
